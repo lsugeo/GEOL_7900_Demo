@@ -1,0 +1,206 @@
+Source:
+           /Users/kluttrell/LSU_Stuff/TEACHING/GEOL_7900_GeodesyML_Spring2023/Part3_InSAR/Ridgecrest_ARIA/S1-GUNW-D-R-071-tops-20191225_20181224-135133-36449N_34473N-PP-cb43-v2_0_2.nc
+Format:
+           netcdf4
+Variables:
+    productBoundingBox
+           Size:       462x1
+           Dimensions: wkt_length,wkt_count
+           Datatype:   char
+    crs_polygon       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+Groups:
+    /science/
+        Groups:
+            /science/grids/
+                Groups:
+                    /science/grids/data/
+                        Variables:
+                            crs                
+                                   Size:       1x1
+                                   Dimensions: 
+                                   Datatype:   int32
+                            longitude          
+                                   Size:       3814x1
+                                   Dimensions: longitude
+                                   Datatype:   double
+                            latitude           
+                                   Size:       2373x1
+                                   Dimensions: latitude
+                                   Datatype:   double
+                            unwrappedPhase     
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                            coherence          
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                            connectedComponents
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                            amplitude          
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                    
+                    /science/grids/imagingGeometry/
+                        Variables:
+                            crsMeta              
+                                   Size:       1x1
+                                   Dimensions: 
+                                   Datatype:   int32
+                            longitudeMeta        
+                                   Size:       37x1
+                                   Dimensions: longitudeMeta
+                                   Datatype:   double
+                            latitudeMeta         
+                                   Size:       26x1
+                                   Dimensions: latitudeMeta
+                                   Datatype:   double
+                            heightsMeta          
+                                   Size:       4x1
+                                   Dimensions: heightsMeta
+                                   Datatype:   double
+                            perpendicularBaseline
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                            parallelBaseline     
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                            incidenceAngle       
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                            lookAngle            
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                            azimuthAngle         
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                    
+                    /science/grids/corrections/
+                        Groups:
+                            /science/grids/corrections/derived/
+                                Groups:
+                                    /science/grids/corrections/derived/ionosphere/
+                                        Variables:
+                                            ionosphere
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                    
+                            
+                            /science/grids/corrections/external/
+                                Groups:
+                                    /science/grids/corrections/external/troposphere/
+                                        Variables:
+                                            troposphereHydrostatic
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                            troposphereWet        
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                    
+                                    /science/grids/corrections/external/tides/
+                                        Variables:
+                                            solidEarthTide
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                    
+                            
+                    
+            
+            /science/radarMetaData/
+                Variables:
+                    missionID                  
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    wavelength                 
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    centerFrequency            
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    productType                
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    ISCEversion                
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    unwrapMethod               
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    DEM                        
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    ESDthreshold               
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    azimuthZeroDopplerStartTime
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    azimuthZeroDopplerEndTime  
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                    azimuthTimeInterval        
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    slantRangeSpacing          
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    slantRangeEnd              
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                    slantRangeStart            
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                Groups:
+                    /science/radarMetaData/inputSLC/
+                        Groups:
+                            /science/radarMetaData/inputSLC/reference/
+                                Variables:
+                                    L1InputGranules
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                    orbitType      
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                            
+                            /science/radarMetaData/inputSLC/secondary/
+                                Variables:
+                                    L1InputGranules
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                    orbitType      
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                            

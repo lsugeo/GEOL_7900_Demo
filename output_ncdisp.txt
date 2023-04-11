@@ -1,0 +1,442 @@
+>> ncdisp(filename)
+Source:
+           /Users/kluttrell/LSU_Stuff/TEACHING/GEOL_7900_GeodesyML_Spring2023/Part3_InSAR/Ridgecrest_ARIA/S1-GUNW-D-R-071-tops-20191225_20181224-135133-36449N_34473N-PP-cb43-v2_0_2.nc
+Format:
+           netcdf4
+Global Attributes:
+           product_type       = 'UNW GEO IFG'
+           Conventions        = 'CF-1.6'
+           title              = 'ARIA standard product UNW GEO IFG'
+           version            = '1b'
+           author             = 'David Bekaert'
+           institution        = 'Jet Propulsion Laboratory'
+           source             = 'Contains modified Copernicus Sentinel data processed by ESA and ARIA NASA/JPL'
+           references         = 'https://aria.jpl.nasa.gov/'
+           ogr_geometry_field = 'productBoundingBox'
+           ogr_layer_name     = 'productBoundingBox'
+           ogr_layer_type     = 'POLYGON'
+Dimensions:
+           matchup    = 2     (UNLIMITED)
+           wkt_length = 462
+           wkt_count  = 1
+Variables:
+    productBoundingBox
+           Size:       462x1
+           Dimensions: wkt_length,wkt_count
+           Datatype:   char
+           Attributes:
+                       description   = 'Product bounding box defined as ISO WKT polygon'
+                       units         = 'unitless'
+                       grid_mapping  = 'crs_polygon'
+                       long_name     = 'productBoundingBox'
+                       standard_name = 'productBoundingBox'
+    crs_polygon       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       spatial_ref   = 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'
+                       long_name     = 'crs_polygon'
+                       standard_name = 'crs_polygon'
+Groups:
+    /science/
+        Groups:
+            /science/grids/
+                Groups:
+                    /science/grids/data/
+                        Dimensions:
+                                   latitude  = 2373
+                                   longitude = 3814
+                        Variables:
+                            crs                
+                                   Size:       1x1
+                                   Dimensions: 
+                                   Datatype:   int32
+                                   Attributes:
+                                               grid_mapping_name           = 'latitude_longitude'
+                                               longitude_of_prime_meridian = 0
+                                               semi_major_axis             = 6378137
+                                               inverse_flattening          = 298.2572
+                                               long_name                   = 'crs'
+                                               standard_name               = 'crs'
+                                               crs_wkt                     = 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'
+                            longitude          
+                                   Size:       3814x1
+                                   Dimensions: longitude
+                                   Datatype:   double
+                                   Attributes:
+                                               _CoordinateAxisType = 'Lon'
+                                               units               = 'degrees_east'
+                                               long_name           = 'longitude'
+                                               standard_name       = 'longitude'
+                            latitude           
+                                   Size:       2373x1
+                                   Dimensions: latitude
+                                   Datatype:   double
+                                   Attributes:
+                                               _CoordinateAxisType = 'Lat'
+                                               units               = 'degrees_north'
+                                               long_name           = 'latitude'
+                                               standard_name       = 'latitude'
+                            unwrappedPhase     
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Unwrapped phase'
+                                               units         = 'rad'
+                                               grid_mapping  = 'crs'
+                                               long_name     = 'unwrappedPhase'
+                                               standard_name = 'unwrappedPhase'
+                            coherence          
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Coherence'
+                                               units         = 'unitless'
+                                               grid_mapping  = 'crs'
+                                               long_name     = 'coherence'
+                                               standard_name = 'coherence'
+                            connectedComponents
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = -1
+                                               description   = 'Snaphu connected components'
+                                               units         = 'unitless'
+                                               grid_mapping  = 'crs'
+                                               long_name     = 'connectedComponents'
+                                               standard_name = 'connectedComponents'
+                            amplitude          
+                                   Size:       3814x2373
+                                   Dimensions: longitude,latitude
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Amplitude'
+                                               units         = 'watt'
+                                               grid_mapping  = 'crs'
+                                               long_name     = 'amplitude'
+                                               standard_name = 'amplitude'
+                    
+                    /science/grids/imagingGeometry/
+                        Dimensions:
+                                   latitudeMeta  = 26
+                                   longitudeMeta = 37
+                                   heightsMeta   = 4
+                        Variables:
+                            crsMeta              
+                                   Size:       1x1
+                                   Dimensions: 
+                                   Datatype:   int32
+                                   Attributes:
+                                               grid_mapping_name           = 'latitude_longitude'
+                                               longitude_of_prime_meridian = 0
+                                               semi_major_axis             = 6378137
+                                               inverse_flattening          = 298.2572
+                                               long_name                   = 'crsMeta'
+                                               standard_name               = 'crsMeta'
+                                               crs_wkt                     = 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'
+                            longitudeMeta        
+                                   Size:       37x1
+                                   Dimensions: longitudeMeta
+                                   Datatype:   double
+                                   Attributes:
+                                               _CoordinateAxisType = 'Lon'
+                                               units               = 'degrees_east'
+                                               long_name           = 'longitude'
+                                               standard_name       = 'longitude'
+                            latitudeMeta         
+                                   Size:       26x1
+                                   Dimensions: latitudeMeta
+                                   Datatype:   double
+                                   Attributes:
+                                               _CoordinateAxisType = 'Lat'
+                                               units               = 'degrees_north'
+                                               long_name           = 'latitude'
+                                               standard_name       = 'latitude'
+                            heightsMeta          
+                                   Size:       4x1
+                                   Dimensions: heightsMeta
+                                   Datatype:   double
+                                   Attributes:
+                                               _CoordinateAxisType = 'Lev'
+                                               units               = 'meter'
+                                               long_name           = 'height'
+                                               standard_name       = 'height'
+                                               positive            = 'up'
+                            perpendicularBaseline
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Perpendicular baseline'
+                                               units         = 'meter'
+                                               grid_mapping  = 'crsMeta'
+                                               long_name     = 'perpendicularBaseline'
+                                               standard_name = 'perpendicularBaseline'
+                            parallelBaseline     
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Parallel baseline'
+                                               units         = 'meter'
+                                               grid_mapping  = 'crsMeta'
+                                               long_name     = 'parallelBaseline'
+                                               standard_name = 'parallelBaseline'
+                            incidenceAngle       
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Incidence angle'
+                                               units         = 'degrees'
+                                               grid_mapping  = 'crsMeta'
+                                               long_name     = 'incidenceAngle'
+                                               standard_name = 'incidenceAngle'
+                            lookAngle            
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Look angle'
+                                               units         = 'degrees'
+                                               grid_mapping  = 'crsMeta'
+                                               long_name     = 'lookAngle'
+                                               standard_name = 'lookAngle'
+                            azimuthAngle         
+                                   Size:       37x26x4
+                                   Dimensions: longitudeMeta,latitudeMeta,heightsMeta
+                                   Datatype:   single
+                                   Attributes:
+                                               _FillValue    = 0
+                                               description   = 'Azimuth angle'
+                                               units         = 'degrees'
+                                               grid_mapping  = 'crsMeta'
+                                               long_name     = 'azimuthAngle'
+                                               standard_name = 'azimuthAngle'
+                    
+                    /science/grids/corrections/
+                        Groups:
+                            /science/grids/corrections/derived/
+                                Groups:
+                                    /science/grids/corrections/derived/ionosphere/
+                                        Variables:
+                                            ionosphere
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                                   Attributes:
+                                                               long_name     = 'ionosphere'
+                                                               standard_name = 'ionosphere'
+                                    
+                            
+                            /science/grids/corrections/external/
+                                Groups:
+                                    /science/grids/corrections/external/troposphere/
+                                        Variables:
+                                            troposphereHydrostatic
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                                   Attributes:
+                                                               long_name     = 'troposphereHydrostatic'
+                                                               standard_name = 'troposphereHydrostatic'
+                                            troposphereWet        
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                                   Attributes:
+                                                               long_name     = 'troposphereWet'
+                                                               standard_name = 'troposphereWet'
+                                    
+                                    /science/grids/corrections/external/tides/
+                                        Variables:
+                                            solidEarthTide
+                                                   Size:       2x1
+                                                   Dimensions: /matchup
+                                                   Datatype:   UNSUPPORTED DATATYPE
+                                                   Attributes:
+                                                               long_name     = 'solidEarthTide'
+                                                               standard_name = 'solidEarthTide'
+                                    
+                            
+                    
+            
+            /science/radarMetaData/
+                Variables:
+                    missionID                  
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       long_name     = 'missionID'
+                                       standard_name = 'missionID'
+                    wavelength                 
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Radar wavelength'
+                                       units         = 'meter'
+                                       long_name     = 'wavelength'
+                                       standard_name = 'wavelength'
+                    centerFrequency            
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Radar center frequency'
+                                       units         = 'Hertz'
+                                       long_name     = 'centerFrequency'
+                                       standard_name = 'centerFrequency'
+                    productType                
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       long_name     = 'productType'
+                                       standard_name = 'productType'
+                    ISCEversion                
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       description   = 'ISCE Version'
+                                       units         = 'unitless'
+                                       long_name     = 'ISCEversion'
+                                       standard_name = 'ISCEversion'
+                    unwrapMethod               
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       description   = 'Method used to unwrap IFG product'
+                                       long_name     = 'unwrapMethod'
+                                       standard_name = 'unwrapMethod'
+                    DEM                        
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       description   = 'Dem Type'
+                                       units         = 'unitless'
+                                       long_name     = 'DEM'
+                                       standard_name = 'DEM'
+                    ESDthreshold               
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'ESD threshold, -1 = no ESD applied'
+                                       units         = 'unitless'
+                                       long_name     = 'ESDthreshold'
+                                       standard_name = 'ESDthreshold'
+                    azimuthZeroDopplerStartTime
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       description   = 'Zero Doppler azimuth start time'
+                                       units         = 'Time ISO 8601 format'
+                                       long_name     = 'azimuthZeroDopplerStartTime'
+                                       standard_name = 'azimuthZeroDopplerStartTime'
+                    azimuthZeroDopplerEndTime  
+                           Size:       2x1
+                           Dimensions: /matchup
+                           Datatype:   UNSUPPORTED DATATYPE
+                           Attributes:
+                                       description   = 'Zero Doppler azimuth end time'
+                                       units         = 'Time ISO 8601 format'
+                                       long_name     = 'azimuthZeroDopplerEndTime'
+                                       standard_name = 'azimuthZeroDopplerEndTime'
+                    azimuthTimeInterval        
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Azimuth time interval'
+                                       units         = 'seconds'
+                                       long_name     = 'azimuthTimeInterval'
+                                       standard_name = 'azimuthTimeInterval'
+                    slantRangeSpacing          
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Slant range pixel spacing'
+                                       units         = 'meter'
+                                       long_name     = 'slantRangeSpacing'
+                                       standard_name = 'slantRangeSpacing'
+                    slantRangeEnd              
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Slant range end'
+                                       units         = 'meter'
+                                       long_name     = 'slantRangeEnd'
+                                       standard_name = 'slantRangeEnd'
+                    slantRangeStart            
+                           Size:       1x1
+                           Dimensions: 
+                           Datatype:   single
+                           Attributes:
+                                       description   = 'Slant range start'
+                                       units         = 'meter'
+                                       long_name     = 'slantRangeStart'
+                                       standard_name = 'slantRangeStart'
+                Groups:
+                    /science/radarMetaData/inputSLC/
+                        Groups:
+                            /science/radarMetaData/inputSLC/reference/
+                                Variables:
+                                    L1InputGranules
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                           Attributes:
+                                                       description   = 'Reference input granules'
+                                                       long_name     = 'L1InputGranules'
+                                                       standard_name = 'L1InputGranules'
+                                    orbitType      
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                           Attributes:
+                                                       description   = 'Reference orbit type'
+                                                       long_name     = 'orbitType'
+                                                       standard_name = 'orbitType'
+                            
+                            /science/radarMetaData/inputSLC/secondary/
+                                Variables:
+                                    L1InputGranules
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                           Attributes:
+                                                       description   = 'Secondary input granules'
+                                                       long_name     = 'L1InputGranules'
+                                                       standard_name = 'L1InputGranules'
+                                    orbitType      
+                                           Size:       2x1
+                                           Dimensions: /matchup
+                                           Datatype:   UNSUPPORTED DATATYPE
+                                           Attributes:
+                                                       description   = 'Secondary orbit type'
+                                                       long_name     = 'orbitType'
+                                                       standard_name = 'orbitType'
+                            
+                    
+            
+    
+>>  
