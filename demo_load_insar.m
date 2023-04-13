@@ -4,12 +4,12 @@ filename='S1-GUNW-D-R-087-tops-20181219_20181201-161542-00157W_00019N-PP-c008-v2
 
 % ncdisp(filename); % list the components include in the file
 
-A=ncread(filename,'/science/grids/data/amplitude');
-y=ncread(filename,'/science/grids/data/latitude');
 x=ncread(filename,'/science/grids/data/longitude');
-phase=ncread(filename,'/science/grids/data/unwrappedPhase');
-coh=ncread(filename,'/science/grids/data/coherence');
-concomp=ncread(filename,'/science/grids/data/connectedComponents');
+y=ncread(filename,'/science/grids/data/latitude');
+A=ncread(filename,'/science/grids/data/amplitude')'; % take the transpose to make 
+phase=ncread(filename,'/science/grids/data/unwrappedPhase')';
+coh=ncread(filename,'/science/grids/data/coherence')';
+concomp=ncread(filename,'/science/grids/data/connectedComponents')';
 wavelength=ncread(filename,'/science/radarMetaData/wavelength');
 
 
@@ -34,3 +34,6 @@ Colorscale(1,:)=[1 1 1]*0.7;
 % colormap(jet)
 colormap(Colorscale)
 caxis([-0.2,0.2])
+
+
+
