@@ -89,9 +89,19 @@ clear
   % HeadAngle=-170; % degrees from north - descending flight direction, in deg E of N
 
   % unit vector components for the line-of-sight direction
-  px=sind(IncAngle)*cosd(HeadAngle);
-  py=-sind(IncAngle)*sind(HeadAngle);
-  pz=-cosd(IncAngle);
+  %  - careful to choose whether you want satellite to ground,
+  %    or ground to satellite (just a sign change)
+  %
+
+  % % vector components for line-of-sight range change (point from satellite to ground)
+  % px=sind(IncAngle)*cosd(HeadAngle);
+  % py=-sind(IncAngle)*sind(HeadAngle);
+  % pz=-cosd(IncAngle);
+
+  % vector components for line-of-sight surface displacement (point from ground to satellite)
+  px=-sind(IncAngle)*cosd(HeadAngle);
+  py=sind(IncAngle)*sind(HeadAngle);
+  pz=cosd(IncAngle);
 
   % displacement in LOS direction is dot product of 3D displacement with LOS unit vector
   uLOS=uE*px+uN*py+uZ*pz;
