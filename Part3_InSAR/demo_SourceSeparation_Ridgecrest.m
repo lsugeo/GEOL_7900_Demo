@@ -76,7 +76,7 @@ toc
     y0=35.2;
     y1=36.2;
 
-    dx=1/60/20; % how many degrees apart are the points (20 arcseconds)
+    dx=1/60/20; % how many degrees apart are the points (3 arcseconds)
     dy=dx;
 
   %

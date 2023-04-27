@@ -112,7 +112,7 @@ tic
     N=Yshifted;
 
     % fault/plane orientation info
-    STRIKE=135; % degrees east of north
+    STRIKE=-135; % degrees east of north
     DIP=85;     % degress down from horizontal
 
     % fault/plane dimensions and location
@@ -198,7 +198,7 @@ tic
   % Define the default parameters
   %
     % fault/plane orientation info
-    STRIKE=135; % degrees east of north
+    STRIKE=140; % degrees east of north
     DIP=85;     % degress down from horizontal
 
     % fault/plane dimensions and location
@@ -217,7 +217,8 @@ tic
   %  but this should get you close to the global min for simple cases)
   %
     % STRIKEset=[0:45:360];
-    STRIKEset=[0:20:100,120:5:160,180:20:360]; % finer sampling near the probable best value
+    % STRIKEset=[0:20:100,120:5:160,180:20:360]; % finer sampling near the probable best value
+    RAKEset=[-180:45:180];
 
   %
   % Loop over the varying set of parameters
@@ -225,8 +226,8 @@ tic
   % Just store the RMS value
   %
     toc
-    for k=1:numel(STRIKEset)
-      STRIKE=STRIKEset(k);
+    for k=1:numel(RAKEset)
+      RAKE=RAKEset(k);
       [uE,uN,uZ] = okada85(E,N,DEPTH,STRIKE,DIP,LENGTH,WIDTH,RAKE,SLIP,OPEN);
       LOS_model=uE*px+uN*py+uZ*pz;
       residual=LOS-LOS_model;
@@ -238,7 +239,7 @@ tic
   % plot the misfit as a function of parameters
   %
     figure(4),clf
-    plot(STRIKEset,residual_rms,'o-')
-    xlabel('strike'),ylabel('rms misfit')
+    plot(RAKEset,residual_rms,'o-')
+    xlabel('rake'),ylabel('rms misfit')
 toc
 
